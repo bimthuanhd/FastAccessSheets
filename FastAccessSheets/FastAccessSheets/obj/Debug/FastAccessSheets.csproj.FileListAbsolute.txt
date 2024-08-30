@@ -1,0 +1,16 @@
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\bin\Debug\FastAccessSheets.dll
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\bin\Debug\FastAccessSheets.pdb
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets.csproj.AssemblyReference.cache
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\ResourceFile\StyleResource.baml
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\View\FastAccessView.g.cs
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets_MarkupCompile.cache
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets_MarkupCompile.lref
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\View\FastAccessView.baml
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets.g.resources
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets.csproj.CoreCompileInputs.cache
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets.dll
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAccessSheets.pdb
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\RV.API\FastAccessSheets\FastAccessSheets\FastAccessSheets\obj\Debug\FastAcce.67F54371.Up2Date

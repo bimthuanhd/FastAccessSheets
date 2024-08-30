@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|d:\\rv.api\\fastaccesssheets\\fastaccesssheets\\fastaccesssheets\\view\\fastaccessview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\view\\fastaccessview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|d:\\rv.api\\fastaccesssheets\\fastaccesssheets\\fastaccesssheets\\viewmodel\\fastaccessvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\viewmodel\\fastaccessvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|d:\\rv.api\\fastaccesssheets\\fastaccesssheets\\fastaccesssheets\\model\\sheetent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\model\\sheetent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|d:\\rv.api\\fastaccesssheets\\fastaccesssheets\\fastaccesssheets\\view\\fastaccessview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\view\\fastaccessview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|d:\\rv.api\\fastaccesssheets\\fastaccesssheets\\fastaccesssheets\\model\\viewent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\model\\viewent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\fastaccesssheets\\single\\model\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\single\\model\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|d:\\rv.api\\fastaccesssheets\\fastaccesssheets\\fastaccesssheets\\single\\form\\formdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\single\\form\\formdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\fastaccesssheets\\single\\form\\formdatautil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\single\\form\\formdatautil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\fastaccesssheets\\utils\\findchildclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46FDFD92-7ADB-4546-A7FA-DC7EFEB52DC2}|FastAccessSheets\\FastAccessSheets.csproj|solutionrelative:fastaccesssheets\\utils\\findchildclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1517,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FastAccessVM.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\ViewModel\\FastAccessVM.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\ViewModel\\FastAccessVM.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\ViewModel\\FastAccessVM.cs",
+              "RelativeToolTip": "FastAccessSheets\\ViewModel\\FastAccessVM.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:48:24.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormData.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Single\\Form\\FormData.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\Single\\Form\\FormData.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Single\\Form\\FormData.cs",
+              "RelativeToolTip": "FastAccessSheets\\Single\\Form\\FormData.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:31:23.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FastAccessView.xaml.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\View\\FastAccessView.xaml.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\View\\FastAccessView.xaml.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\View\\FastAccessView.xaml.cs",
+              "RelativeToolTip": "FastAccessSheets\\View\\FastAccessView.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:19:39.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FastAccessView.xaml",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\View\\FastAccessView.xaml",
+              "RelativeDocumentMoniker": "FastAccessSheets\\View\\FastAccessView.xaml",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\View\\FastAccessView.xaml",
+              "RelativeToolTip": "FastAccessSheets\\View\\FastAccessView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-30T14:19:36.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewEnt.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Model\\ViewEnt.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\Model\\ViewEnt.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Model\\ViewEnt.cs",
+              "RelativeToolTip": "FastAccessSheets\\Model\\ViewEnt.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:09:35.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SheetEnt.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Model\\SheetEnt.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\Model\\SheetEnt.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Model\\SheetEnt.cs",
+              "RelativeToolTip": "FastAccessSheets\\Model\\SheetEnt.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB8AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:06:24.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FindChildClass.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Utils\\FindChildClass.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\Utils\\FindChildClass.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Utils\\FindChildClass.cs",
+              "RelativeToolTip": "FastAccessSheets\\Utils\\FindChildClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T13:55:17.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormDataUtil.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Single\\Form\\FormDataUtil.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\Single\\Form\\FormDataUtil.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Single\\Form\\FormDataUtil.cs",
+              "RelativeToolTip": "FastAccessSheets\\Single\\Form\\FormDataUtil.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAtwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T13:52:40.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Data.cs",
+              "DocumentMoniker": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Single\\Model\\Data.cs",
+              "RelativeDocumentMoniker": "FastAccessSheets\\Single\\Model\\Data.cs",
+              "ToolTip": "D:\\RV.API\\FastAccessSheets\\FastAccessSheets\\FastAccessSheets\\Single\\Model\\Data.cs",
+              "RelativeToolTip": "FastAccessSheets\\Single\\Model\\Data.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T13:52:35.616Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
