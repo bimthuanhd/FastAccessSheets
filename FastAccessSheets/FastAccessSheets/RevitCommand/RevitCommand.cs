@@ -34,13 +34,12 @@ namespace HTAddin
             data.doc = doc;
             data.sel = sel;
 
-            //List<FamilyInstance> selectedBeams = Util.SelectElementsbyType(uiDoc, BuiltInCategory.OST_StructuralFraming);
             var fastAccessVM = new FastAccessVM();
             fastAccessVM.Initialize();
 
             var form = formData.Form;
             form.DataContext = fastAccessVM;
-            form.ShowDialog();
+            form.Show();
 
             return Result.Succeeded;
         }

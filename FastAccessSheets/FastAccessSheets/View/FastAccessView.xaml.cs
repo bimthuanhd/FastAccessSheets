@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SingleData;
+using Autodesk.Revit.UI;
 
 
 namespace FastAccessSheets.View
@@ -34,13 +35,17 @@ namespace FastAccessSheets.View
             FormData.Instance = null;
             Data.Instance = null;
         }
-        private void Button_OkClick(object sender, RoutedEventArgs e)
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            FormData.Instance.HandleOkClick();
+            WatermarkTextBlock.Visibility = Visibility.Collapsed;
         }
-        private void Button_CancelClick(object sender, RoutedEventArgs e)
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            FormData.Instance.HandleCancleClick();
+            if (string.IsNullOrEmpty(WatermarkTextBox.Text))
+            {
+                WatermarkTextBlock.Visibility = Visibility.Visible;
+            }
         }
     }
 }

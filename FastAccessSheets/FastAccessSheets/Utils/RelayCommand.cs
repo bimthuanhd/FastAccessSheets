@@ -5,27 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-class RelayCommand<T> : ICommand
+public class RelayCommand : ICommand
 {
-    private readonly Predicate<T> _canExecute;
-    private readonly Action<T> _execute;
+    private readonly Action<object> _execute;
+    private readonly Predicate<object> _canExecute;
 
-    public RelayCommand(Predicate<T> canExecute, Action<T> execute)
+    public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
     {
-        if (execute == null)
-            throw new ArgumentNullException("execute");
+        _execute = execute ?? throw new ArgumentNullException(nameof(execute));
         _canExecute = canExecute;
-        _execute = execute;
     }
 
     public bool CanExecute(object parameter)
-     {
-        return _canExecute == null ? true : _canExecute((T)parameter);
+    {
+        return _canExecute == null || _canExecute(parameter);
     }
 
     public void Execute(object parameter)
     {
-        _execute((T)parameter);
+        _execute(parameter);
     }
 
     public event EventHandler CanExecuteChanged
