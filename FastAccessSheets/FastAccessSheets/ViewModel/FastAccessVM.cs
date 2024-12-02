@@ -7,12 +7,14 @@ using SingleData;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using static FastAccessSheets.Model.Enums;
 
 namespace FastAccessSheets.ViewModel
 {
@@ -22,6 +24,24 @@ namespace FastAccessSheets.ViewModel
         public IList<Element> Alltitleblocks = new List<Element>();
         public List<Tuple<ViewSheet, FamilyInstance>> AllSheetTitleList = new List<Tuple<ViewSheet, FamilyInstance>>();
         public List<SheetEnt> SheetEntsDict = new List<SheetEnt>();
+
+        private SheetTab sheetTab = SheetTab.Access;
+        public SheetTab SheetTab
+        {
+            get => sheetTab;
+            set
+            {
+                sheetTab = value;
+                OnPropertyChanged(nameof(sheetTab));
+            }
+        }
+
+        private ClearSheetModel clearSheetModel;
+        public ClearSheetModel ClearSheetModel
+        {
+            get => clearSheetModel ?? (clearSheetModel = new ClearSheetModel());
+            set => clearSheetModel = value;
+        }
 
         private ObservableCollection<SheetEnt> sheetEnts;
         public ObservableCollection<SheetEnt> SheetEnts

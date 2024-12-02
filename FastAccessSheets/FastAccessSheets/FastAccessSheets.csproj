@@ -72,6 +72,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ClearItem.cs" />
+    <Compile Include="Model\ClearSheetModel.cs" />
+    <Compile Include="Model\EnumModel.cs" />
+    <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\ViewEnt.cs" />
     <Compile Include="Model\SheetEnt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
