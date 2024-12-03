@@ -40,7 +40,11 @@ namespace FastAccessSheets.ViewModel
         public ClearSheetModel ClearSheetModel
         {
             get => clearSheetModel ?? (clearSheetModel = new ClearSheetModel());
-            set => clearSheetModel = value;
+            set
+            {
+                clearSheetModel = value;
+                OnPropertyChanged(nameof(clearSheetModel));
+            }
         }
 
         private ObservableCollection<SheetEnt> sheetEnts;

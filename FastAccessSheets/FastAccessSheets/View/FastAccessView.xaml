@@ -175,12 +175,13 @@
                                       Padding="5 2 2 2" 
                                       DisplayMemberPath="Name"
                                       ItemsSource="{Binding ClearSheetModel.SearchTypes}"
-                                      SelectedItem="{Binding ClearSheetModel.SelectedSearchType, UpdateSourceTrigger=PropertyChanged}"/>
+                                      SelectedItem="{Binding ClearSheetModel.SelectedSearchType}"/>
                         </StackPanel>
                         <Grid Grid.Row="1" Margin="4,0,4,0" Grid.ColumnSpan="3">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="215*"/>
-                                <ColumnDefinition Width="771*"/>
+                                <ColumnDefinition Width="64*"/>
+                                <ColumnDefinition Width="707*"/>
                             </Grid.ColumnDefinitions>
                             <TextBox Name="WatermarkTextBox_Clear"
                                  VerticalAlignment="Center" 
@@ -189,21 +190,21 @@
                                  GotFocus="TextBox_GotFocus"
                                  LostFocus="TextBox_LostFocus" 
                                  Padding="2 3"
-                                 Text="{Binding TextTagSearch,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2"/>
+                                 Text="{Binding TextTagSearch,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="3"/>
                             <TextBlock Name="WatermarkTextBlock_Clear" 
                                    Text="Search sheet name..." 
                                    VerticalAlignment="Center" 
                                    Padding="3 3"
                                    Foreground="Gray" 
                                    IsHitTestVisible="False" 
-                                   Visibility="Visible" Grid.ColumnSpan="2" />
+                                   Visibility="Visible" Grid.ColumnSpan="3" />
                         </Grid>
 
                         <StackPanel Grid.Row="2" Grid.ColumnSpan="3">
                             <StackPanel Grid.Column="0" Margin="4 3 4 12">
                                 <ListBox Grid.Row="1" Name="sheetList_Clear" HorizontalContentAlignment="Stretch" 
-                                         ItemsSource="{Binding SheetEnts}"
-                                         SelectedItem="{Binding SelectedSheetEnt}"
+                                         ItemsSource="{Binding ClearSheetModel.CurrentClearItems}"
+                                         SelectedItem="{Binding ClearSheetModel.SelectedCurrentClearItem}"
                                          Height="444"
                                          ScrollViewer.VerticalScrollBarVisibility="Auto">
                                     <ListBox.ItemTemplate>
@@ -227,7 +228,7 @@
                                                         </i:EventTrigger>
                                                     </i:Interaction.Triggers>
                                                 </Button>
-                                                <TextBlock Grid.Column="1" Text="{Binding SheetName}" VerticalAlignment="Center" />
+                                                <TextBlock Grid.Column="1" Text="{Binding Name}" VerticalAlignment="Center" />
                                             </Grid>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>

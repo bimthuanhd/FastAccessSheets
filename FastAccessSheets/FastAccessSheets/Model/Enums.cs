@@ -14,12 +14,12 @@ namespace FastAccessSheets.Model
             Clear = 1,
         }
 
-        public enum ItemSearchType
-        {
-            View = 0,
-            Schedule = 1,
-            Legend = 2,
-            All = 3,
-        }
+        //public enum ItemSearchType
+        //{
+        //    View = 0,
+        //    Schedule = 1,
+        //    Legend = 2,
+        //    All = 3,
+        //}
     }
 }

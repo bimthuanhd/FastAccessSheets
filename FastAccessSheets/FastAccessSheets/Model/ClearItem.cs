@@ -10,8 +10,8 @@ namespace FastAccessSheets.Model
 {
     public class ClearItem : BaseViewModel
     {
-        private ItemSearchType searchType;
-        public ItemSearchType SearchType
+        private ViewType searchType;
+        public ViewType SearchType
         {
             get => searchType;
             set
@@ -31,7 +31,18 @@ namespace FastAccessSheets.Model
                 OnPropertyChanged(nameof(ele));
             }
         }
-        public ClearItem(ItemSearchType type, Element eleInput )
+
+        private string name;
+        public string Name
+        {
+            get => name ?? (name = Ele.Name);
+            set
+            {
+                name = value;
+                OnPropertyChanged(nameof(name));
+            }
+        }
+        public ClearItem(ViewType type, Element eleInput)
         {
             this.searchType = type;
             this.ele = eleInput;

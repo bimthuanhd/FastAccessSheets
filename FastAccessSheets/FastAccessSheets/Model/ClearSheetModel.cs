@@ -21,10 +21,32 @@ namespace FastAccessSheets.Model
         {
             get => searchTypes ?? (searchTypes = new ObservableCollection<EnumModel>()
             {
-                new EnumModel("View",(int)ItemSearchType.View),
-                new EnumModel("Schedule",(int)ItemSearchType.Schedule),
-                new EnumModel("Legend",(int)ItemSearchType.Legend),
-                new EnumModel("All",(int)ItemSearchType.All),
+                new EnumModel("Undefined", (int)ViewType.Undefined),
+                new EnumModel("FloorPlan", (int)ViewType.FloorPlan),
+                new EnumModel("EngineeringPlan", (int)ViewType.EngineeringPlan),
+                new EnumModel("AreaPlan", (int)ViewType.AreaPlan),
+                new EnumModel("CeilingPlan", (int)ViewType.CeilingPlan),
+                new EnumModel("Elevation", (int)ViewType.Elevation),
+                new EnumModel("Section", (int)ViewType.Section),
+                new EnumModel("Detail", (int)ViewType.Detail),
+                new EnumModel("ThreeD", (int)ViewType.ThreeD),
+                new EnumModel("Schedule", (int)ViewType.Schedule),
+                new EnumModel("DraftingView", (int)ViewType.DraftingView),
+                new EnumModel("DrawingSheet", (int)ViewType.DrawingSheet),
+                new EnumModel("Legend", (int)ViewType.Legend),
+                new EnumModel("Report", (int)ViewType.Report),
+                new EnumModel("ProjectBrowser", (int)ViewType.ProjectBrowser),
+                new EnumModel("SystemBrowser", (int)ViewType.SystemBrowser),
+                new EnumModel("CostReport", (int)ViewType.CostReport),
+                new EnumModel("LoadsReport", (int)ViewType.LoadsReport),
+                new EnumModel("PresureLossReport", (int)ViewType.PresureLossReport),
+                new EnumModel("PanelSchedule", (int)ViewType.PanelSchedule),
+                new EnumModel("ColumnSchedule", (int)ViewType.ColumnSchedule),
+                new EnumModel("Walkthrough", (int)ViewType.Walkthrough),
+                new EnumModel("Rendering", (int)ViewType.Rendering),
+                new EnumModel("SystemsAnalysisReport", (int)ViewType.SystemsAnalysisReport),
+                new EnumModel("Internal", (int)ViewType.Internal),
+                new EnumModel("All", -1)
             });
             set
             {
@@ -41,14 +63,14 @@ namespace FastAccessSheets.Model
             {
                 selectedSearchType = value;
                 OnPropertyChanged(nameof(selectedSearchType));
-                ResetClearItems();
+                ResetClearItems(value);
             }
         }
 
         private List<ClearItem> clearItemDict;
         public List<ClearItem> ClearItemDict
         {
-            get => clearItemDict;
+            get => clearItemDict ?? (clearItemDict = GetClearItemDict());
             set
             {
                 clearItemDict = value;
@@ -67,33 +89,46 @@ namespace FastAccessSheets.Model
             }
         }
 
-        public void ResetClearItems(ItemSearchType currentType = ItemSearchType.View)
+        private ClearItem selectedCurrentClearItem;
+        public ClearItem SelectedCurrentClearItem
+        {
+            get => selectedCurrentClearItem ?? (selectedCurrentClearItem = CurrentClearItems.FirstOrDefault());
+            set
+            {
+                selectedCurrentClearItem = value;
+                OnPropertyChanged(nameof(selectedCurrentClearItem));
+            }
+        }
+
+        public List<ClearItem> GetClearItemDict()
+        {
+            var list = new List<ClearItem>();
+
+            List<RevitView> viewsNotOnSheet = new List<RevitView>(new FilteredElementCollector(Data.Instance.doc)
+                        .OfClass(typeof(RevitView))
+                        .ToElements()
+                        .Cast<RevitView>()
+                        .Where(x => !x.IsTemplate && String.IsNullOrEmpty(x.get_Parameter(BuiltInParameter.VIEWPORT_SHEET_NUMBER).AsString())));
+
+            list.AddRange(viewsNotOnSheet.Select(x => new ClearItem(x.ViewType, x)));
+
+            return list;
+        }
+
+        public void ResetClearItems(EnumModel searchType)
         {
             var items = new List<ClearItem>();
 
-            switch (currentType)
+            if (searchType.Name == "All")
             {
-                case ItemSearchType.View:
-                    if (ClearItemDict.Find(x => x.SearchType == ItemSearchType.View) != null) return;
-
-                    List<RevitView> viewsNotOnSheet = new List<RevitView>(new FilteredElementCollector(Data.Instance.doc)
-                                .OfClass(typeof(RevitView))
-                                .ToElements()
-                                .Cast<RevitView>()
-                                .Where(x => !x.IsTemplate && String.IsNullOrEmpty(x.get_Parameter(BuiltInParameter.VIEWPORT_SHEET_NUMBER).AsString())));
-
-                    ClearItemDict.AddRange(viewsNotOnSheet.Select(x => new ClearItem(ItemSearchType.View, x)));
-                    break;
-                case ItemSearchType.Schedule:
-                    break;
-                case ItemSearchType.Legend:
-                    break;
-                case ItemSearchType.All:
-                    break;
-                default:
-                    break;
+                CurrentClearItems = ClearItemDict.ToObservableCollection();
             }
-
+            else
+            {
+                CurrentClearItems = ClearItemDict
+                    .Where(x => x.SearchType.ToString() == searchType.Name)
+                    .ToObservableCollection();
+            }
         }
 
     }
