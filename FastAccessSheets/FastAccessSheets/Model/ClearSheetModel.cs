@@ -81,7 +81,7 @@ namespace FastAccessSheets.Model
         private ObservableCollection<ClearItem> currentClearItems;
         public ObservableCollection<ClearItem> CurrentClearItems
         {
-            get => currentClearItems;
+            get => currentClearItems ?? (currentClearItems = new ObservableCollection<ClearItem>());
             set
             {
                 currentClearItems = value;

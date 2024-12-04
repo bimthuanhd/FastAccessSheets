@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SingleData;
 using Autodesk.Revit.UI;
+using FastAccessSheets.Model;
 
 
 namespace FastAccessSheets.View
@@ -45,6 +46,22 @@ namespace FastAccessSheets.View
             if (string.IsNullOrEmpty(WatermarkTextBox.Text))
             {
                 WatermarkTextBlock.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            var curItem = (sender as CheckBox).DataContext;
+            var lb = sheetList_Clear as ListBox;
+            var data = lb.DataContext;
+            var items = lb.Items;
+            var selectedItems = lb.SelectedItems;
+
+            if (!selectedItems.Contains(curItem)) return;
+
+            foreach (var item in selectedItems)
+            {
+                (item as ClearItem).Ischecked = (curItem as ClearItem).Ischecked;
             }
         }
     }
