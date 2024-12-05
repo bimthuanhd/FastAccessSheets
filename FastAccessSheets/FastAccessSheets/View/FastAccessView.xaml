@@ -20,7 +20,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TabControl Grid.Row="0">
+        <TabControl Grid.Row="0" x:Name="TabCtrl">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Template">
@@ -238,8 +238,30 @@
 
                         <StackPanel Grid.Row="2" Grid.Column="1">
                             <DockPanel>
-                                <Button DockPanel.Dock="Top" Content="Check All" Style="{StaticResource btnFrom_ResourceFile}" Width="90" Margin="5"/>
-                                <Button DockPanel.Dock="Top" Content="UnCheck All" Style="{StaticResource btnFrom_ResourceFile}" Width="90"/>
+                                <Button DockPanel.Dock="Top" Content="Check All" Style="{StaticResource btnFrom_ResourceFile}" Width="90" Margin="5">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction
+                                                Command="{Binding ClearSheetModel.CheckAllCmd}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Button>
+                                <Button DockPanel.Dock="Top" Content="UnCheck All" Style="{StaticResource btnFrom_ResourceFile}" Width="90" Margin="5">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction
+                                                Command="{Binding ClearSheetModel.UnCheckALlCmd}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Button>
+                                <Button DockPanel.Dock="Top" Content="Delete" Style="{StaticResource btnFrom_ResourceFile}" Width="90" Margin="5">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction
+                                                Command="{Binding ClearSheetModel.DeleteCmd}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Button>
                             </DockPanel>
                         </StackPanel>
                     </Grid>

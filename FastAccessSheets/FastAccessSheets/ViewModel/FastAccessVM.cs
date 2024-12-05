@@ -97,6 +97,12 @@ namespace FastAccessSheets.ViewModel
         }
         public void BtnOkeCommand(object parameter)
         {
+            var tabCtrl = FormData.Instance.Form.TabCtrl;
+            if (tabCtrl.SelectedIndex == 1)
+            {
+                ClearSheetModel.DeleteDataViews();
+                return;
+            }
             FormData.Instance.HandleOkClick();
         }
         public void BtnCancelCommand(object parameter)

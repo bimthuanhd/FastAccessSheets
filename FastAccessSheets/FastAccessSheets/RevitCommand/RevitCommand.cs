@@ -39,7 +39,7 @@ namespace HTAddin
 
             var form = formData.Form;
             form.DataContext = fastAccessVM;
-            form.Show();
+            form.ShowDialog();
 
             return Result.Succeeded;
         }

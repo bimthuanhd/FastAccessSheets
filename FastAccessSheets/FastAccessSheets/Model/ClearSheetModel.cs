@@ -1,4 +1,8 @@
-﻿using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.Creation;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Analysis;
+using Autodesk.Revit.UI.Selection;
+using Autodesk.Revit.UI;
 using HTAddin;
 using SingleData;
 using System;
@@ -9,6 +13,7 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 using static FastAccessSheets.Model.Enums;
 using RevitView = Autodesk.Revit.DB.View;
 
@@ -78,6 +83,17 @@ namespace FastAccessSheets.Model
             }
         }
 
+        private List<ClearItem> clearItemsToDelete;
+        public List<ClearItem> ClearItemsToDelete
+        {
+            get => clearItemsToDelete ?? (clearItemsToDelete = new List<ClearItem>());
+            set
+            {
+                clearItemsToDelete = value;
+                OnPropertyChanged(nameof(clearItemsToDelete));
+            }
+        }
+
         private ObservableCollection<ClearItem> currentClearItems;
         public ObservableCollection<ClearItem> CurrentClearItems
         {
@@ -98,6 +114,37 @@ namespace FastAccessSheets.Model
                 selectedCurrentClearItem = value;
                 OnPropertyChanged(nameof(selectedCurrentClearItem));
             }
+        }
+
+        #region Command
+        public ICommand CheckAllCmd { get; set; }
+        public ICommand UnCheckALlCmd { get; set; }
+        public ICommand DeleteCmd { get; set; }
+        #endregion
+
+        public void CheckAllCommand(object parameter)
+        {
+            foreach (var item in CurrentClearItems)
+            {
+                if (item.Ischecked == true) continue;
+                item.Ischecked = true;
+            }
+        }
+
+        public void UnCheckAllCommand(object parameter)
+        {
+            foreach (var item in CurrentClearItems)
+            {
+                if (item.Ischecked == false) continue;
+                item.Ischecked = false;
+            }
+        }
+
+        public void DeleteCommand(object parameter)
+        {
+            ClearItemsToDelete.AddRange(CurrentClearItems.Where(item => item.Ischecked == true));
+            ClearItemDict.RemoveAll(x => ClearItemsToDelete.Contains(x));
+            ResetClearItems(SelectedSearchType);
         }
 
         public List<ClearItem> GetClearItemDict()
@@ -129,6 +176,46 @@ namespace FastAccessSheets.Model
                     .Where(x => x.SearchType.ToString() == searchType.Name)
                     .ToObservableCollection();
             }
+        }
+
+        public void DeleteDataViews()
+        {
+            using (Transaction trans = new Transaction(Data.Instance.doc, "Delete Views"))
+            {
+                trans.Start();
+                string dialogText = "";
+                foreach (ClearItem item in ClearItemsToDelete)
+                {
+                    try
+                    {
+                        Data.Instance.doc.Delete(item.Ele.Id);
+                        try
+                        {
+                            dialogText += $"\n{item.Name}";
+                        }
+                        catch (Exception)
+                        {
+                           continue;
+                        }
+                    }
+                    catch (Autodesk.Revit.Exceptions.ArgumentException ex)
+                    {
+                        continue;
+                    }
+                }
+                var dialogRes = TaskDialog.Show("Revit", $"The selected element has been removed: {dialogText}", TaskDialogCommonButtons.Ok);
+                if (dialogRes != TaskDialogResult.Ok) return;
+
+                trans.Commit();
+            }
+        }
+
+
+        public ClearSheetModel()
+        {
+            CheckAllCmd = new RelayCommand(CheckAllCommand);
+            UnCheckALlCmd = new RelayCommand(UnCheckAllCommand);
+            DeleteCmd = new RelayCommand(DeleteCommand);
         }
 
     }

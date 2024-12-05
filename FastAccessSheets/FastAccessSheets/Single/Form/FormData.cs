@@ -38,11 +38,6 @@ namespace SingleData
             var doc = Instance.ModelData.doc;
             Selection sel = Instance.ModelData.sel;
 
-            //var form = data.Form;
-
-            //Revitdata.doc = doc;
-            //Revitdata.sel = sel;
-
             Form.Close();
         }
 
