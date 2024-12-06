@@ -188,15 +188,10 @@ namespace FastAccessSheets.Model
                 {
                     try
                     {
+                        if (!item.Ele.IsValidObject) continue;
                         Data.Instance.doc.Delete(item.Ele.Id);
-                        try
-                        {
-                            dialogText += $"\n{item.Name}";
-                        }
-                        catch (Exception)
-                        {
-                           continue;
-                        }
+                        if (item.Name == string.Empty) continue;
+                        dialogText += $"\n{item.Name}";
                     }
                     catch (Autodesk.Revit.Exceptions.ArgumentException ex)
                     {

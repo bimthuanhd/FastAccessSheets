@@ -38,7 +38,7 @@ namespace FastAccessSheets.Model
         private string name;
         public string Name
         {
-            get => name ?? (name = Ele.Name);
+            get => name ?? (name = Ele.IsValidObject ? Ele.Name : string.Empty);
             set
             {
                 name = value;
